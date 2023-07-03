@@ -12,7 +12,6 @@ class ContactForm extends Component {
     event.preventDefault();
     this.props.onSubmit(this.state);
     this.clearForm();
-    console.log(this.state);
   };
   handleChange = event => {
     const { name, value } = event.currentTarget;
@@ -20,7 +19,6 @@ class ContactForm extends Component {
       [name]: value,
       id: nanoid(),
     });
-    console.log(value);
   };
   clearForm = () => {
     this.setState({

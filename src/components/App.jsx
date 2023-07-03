@@ -44,7 +44,6 @@ class App extends Component {
       : this.setState(prevState => ({
         contacts: [data, ...prevState.contacts],
       }));
-    console.log(contacts);
   };
   getListContacts = () => {
     const { contacts, filter } = this.state;
