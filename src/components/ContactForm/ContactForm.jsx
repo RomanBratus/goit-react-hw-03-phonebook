@@ -12,6 +12,7 @@ class ContactForm extends Component {
     event.preventDefault();
     this.props.onSubmit(this.state);
     this.clearForm();
+    console.log(this.state);
   };
   handleChange = event => {
     const { name, value } = event.currentTarget;
@@ -19,6 +20,7 @@ class ContactForm extends Component {
       [name]: value,
       id: nanoid(),
     });
+    console.log(value);
   };
   clearForm = () => {
     this.setState({
@@ -56,7 +58,6 @@ class ContactForm extends Component {
 
         <label>
           Number
-
           <input
             style={{
               height: '34px',
